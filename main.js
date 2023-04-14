@@ -26,10 +26,12 @@ for (let i = 0; i < btns.length; i++) {
     // imgSrc에 변수로 담은 이미지 주소를 img의 src에 대체합니다
     img.setAttribute("src", imgSrc);
 
-    // 활성화 클래스 on을 이용해서 클릭한 버튼에 on을 붙여서 css를 변경해줍니다
-
-    // on을 모두 제거하고
-
+    //활성화 클래스 on을 이용해서 클릭한 버튼에 on을 붙여서 css를 변경해줍니다
+    //on을 모두 제거하고
+    for (let k = 0; k < btns.length; k++) {
+      btns[k].classList.remove("on");
+    }
+    btns[i].classList.add("on");
     // 클릭한 대상에 on을 붙입니다
   });
 }
